@@ -1,0 +1,13 @@
+--- origsrc/auctex-11.86/CYGWIN-PATCHES/setup.hint	1969-12-31 19:00:00.000000000 -0500
++++ src/auctex-11.86/CYGWIN-PATCHES/setup.hint	2012-03-13 12:59:40.344979900 -0400
+@@ -0,0 +1,10 @@
++category: Editors
++requires: emacs texinfo texlive texlive-collection-basic texlive-collection-latex texlive-collection-latexrecommended texlive-collection-texinfo
++sdesc: "TeX macros for Emacs"
++ldesc: "AUCTeX is an extensible package for writing and formatting TeX
++files in GNU Emacs and XEmacs.  It supports many different TeX macro
++packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and DocTeX (dtx
++files).  AUCTeX includes preview-latex which makes LaTeX a tightly
++integrated component of your editing workflow by visualizing selected
++source chunks (such as single formulas or graphics) directly as images
++in the source buffer."

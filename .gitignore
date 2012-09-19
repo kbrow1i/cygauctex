@@ -1,0 +1,8 @@
+*~
+emacs-auctex-*-*/
+old/
+save/
+*.tar.gz
+*.tar.bz2
+
+
