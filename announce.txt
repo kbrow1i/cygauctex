@@ -1,0 +1,42 @@
+The following package has been updated in the Cygwin distribution:
+
+*** emacs-auctex-11.87-1 
+
+AUCTeX is an extensible package for writing and formatting TeX files in GNU Emacs and XEmacs.  It supports many different TeX macro packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and DocTeX (dtx files). AUCTeX includes preview-latex which makes LaTeX a tightly integrated component of your editing workflow by visualizing selected source chunks (such as single formulas or graphics) directly as images in the source buffer.
+
+This is an update to the latest upstream release.
+
+New features and fixed bugs in this release
+===========================================
+
+* AUCTeX now supports Biber in conjunction with biblatex, in addition to BibTeX.
+
+* Each AUCTeX mode now has its own abbrev table.  On Emacsen which provide the possibility to inherit abbrevs from other tables, the abbrevs from the Text mode abbrev table are available as well.  Newly defined abbrevs are written to the mode-specific tables, though.
+
+* The file tex-fptex.el was removed.
+
+* Forward/backward search for Evince has been improved.  If Emacs is compiled with DBUS support and a recent Evince version (3.x) is installed, the communication goes over the desktop bus instead of the command line, resulting in more accurate positioning of point in Emacs and highlighting of the target paragraph in Evince.
+
+* A problem where Ghostscript threw an invalid fileaccess error when running preview-latex was fixed.
+
+* A lot of smaller fixes and additions have been made.
+
+For more information see
+
+  http://www.gnu.org/software/auctex/
+
+  http://lists.gnu.org/archive/html/auctex/2012-11/msg00048.html
+
+Ken
+
+            *** CYGWIN-ANNOUNCE UNSUBSCRIBE INFO ***
+
+If you want to unsubscribe from the cygwin-announce mailing list, look at the "List-Unsubscribe: " tag in the email header of this message. Send email to the address specified there.  It will be in the format:
+
+  cygwin-announce-unsubscribe-you=yourdomain.com@cygwin.com
+
+If you need more information on unsubscribing, start reading here:
+
+  http://sourceware.org/lists.html#unsubscribe-simple
+
+Please read *all* of the information on unsubscribing that is available starting at the above URL.

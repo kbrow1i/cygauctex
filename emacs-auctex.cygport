@@ -1,17 +1,16 @@
 NAME="emacs-auctex"
-VERSION=11.86
-RELEASE=3
+VERSION=11.87
+RELEASE=1
 
 HOMEPAGE="http://www.gnu.org/software/auctex/"
 SRC_URI="mirror://gnu/auctex/${P#emacs-}.tar.gz"
 SRC_DIR=${P#emacs-}
-# PATCH_URI="biblatex-biber.patch"
 
 MAKEOPTS+=" -j1 "
 
 CATEGORY="Editors"
 
-REQUIRES="emacs texinfo texlive texlive-collection-basic texlive-collection-latex texlive-collection-latexrecommended texlive-collection-texinfo"
+REQUIRES="emacs texinfo texlive-collection-latex texlive-collection-latexrecommended texlive-collection-texinfo"
 
 SUMMARY="TeX macros for Emacs"
 
