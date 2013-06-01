@@ -1,6 +1,6 @@
 NAME="emacs-auctex"
 VERSION=11.87
-RELEASE=1
+RELEASE=2
 
 HOMEPAGE="http://www.gnu.org/software/auctex/"
 SRC_URI="mirror://gnu/auctex/${P#emacs-}.tar.gz"
@@ -10,7 +10,7 @@ MAKEOPTS+=" -j1 "
 
 CATEGORY="Editors"
 
-REQUIRES="emacs texinfo texlive-collection-latex texlive-collection-latexrecommended texlive-collection-texinfo"
+REQUIRES="emacs texlive-collection-latex texlive-collection-latexrecommended"
 
 SUMMARY="TeX macros for Emacs"
 
