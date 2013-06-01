@@ -1,6 +1,6 @@
 NAME="emacs-auctex"
 VERSION=11.87
-RELEASE=2
+RELEASE=3
 
 HOMEPAGE="http://www.gnu.org/software/auctex/"
 SRC_URI="mirror://gnu/auctex/${P#emacs-}.tar.gz"
@@ -25,7 +25,7 @@ in the source buffer."
 src_compile() {
 	lndirs
 	cd ${B}
-	cygconf --localstatedir=/var/lib
+	cygconf --localstatedir=/var/lib --with-texmf-dir=/usr/share/texmf-dist
 	cygmake
 }
 
