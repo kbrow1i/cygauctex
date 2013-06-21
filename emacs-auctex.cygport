@@ -1,10 +1,11 @@
+ORIG_PN="auctex"
+
 NAME="emacs-auctex"
 VERSION=11.87
-RELEASE=3
+RELEASE=2
 
 HOMEPAGE="http://www.gnu.org/software/auctex/"
-SRC_URI="mirror://gnu/auctex/${P#emacs-}.tar.gz"
-SRC_DIR=${P#emacs-}
+SRC_URI="mirror://gnu/auctex/${ORIG_PN}-${VERSION}.tar.gz"
 
 MAKEOPTS+=" -j1 "
 
