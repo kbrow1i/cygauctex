@@ -1,22 +1,14 @@
-The following package has been updated in the 32-bit Cygwin distribution, and a 64-bit update will follow shortly:
+The following package has been updated in the Cygwin distribution:
 
-*** emacs-auctex-11.87-2
+* emacs-auctex-11.88-1
 
-AUCTeX is an extensible package for writing and formatting TeX files in GNU Emacs and XEmacs.  It supports many different TeX macro packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and DocTeX (dtx files). AUCTeX includes preview-latex which makes LaTeX a tightly integrated component of your editing workflow by visualizing selected source chunks (such as single formulas or graphics) directly as images in the source buffer.
+AUCTeX is an extensible package for writing and formatting TeX files in GNU Emacs and XEmacs.  It supports many different TeX macro packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and DocTeX (dtx files).  AUCTeX includes preview-latex, which makes LaTeX a tightly integrated component of your editing workflow by visualizing selected source chunks (such as single formulas or graphics) directly as images in the source buffer.
 
-This is a rebuild of 11.87-1 due to a change in the TeX Live directory structure as of TeX Live 2013.
+This is a new upstream release.  See the release announcement
+
+  http://lists.gnu.org/archive/html/auctex/2014-10/msg00088.html
+
+for a list of changes since version 11.87.
 
 Ken Brown
 Cygwin's emacs-auctex maintainer
-
-            *** CYGWIN-ANNOUNCE UNSUBSCRIBE INFO ***
-
-If you want to unsubscribe from the cygwin-announce mailing list, look at the "List-Unsubscribe: " tag in the email header of this message. Send email to the address specified there.  It will be in the format:
-
-  cygwin-announce-unsubscribe-you=yourdomain.com@cygwin.com
-
-If you need more information on unsubscribing, start reading here:
-
-  http://sourceware.org/lists.html#unsubscribe-simple
-
-Please read *all* of the information on unsubscribing that is available starting at the above URL.

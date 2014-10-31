@@ -1,5 +1,0 @@
-D=http://sanibeltranquility.com/cygwin/release/TeX
-wget -x -nH --cut-dirs=2 \
-  ${D}/emacs-auctex/emacs-auctex-11.87-2-src.tar.bz2 \
-  ${D}/emacs-auctex/emacs-auctex-11.87-2.tar.bz2 \
-  ${D}/emacs-auctex/setup.hint

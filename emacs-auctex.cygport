@@ -1,11 +1,13 @@
 ORIG_PN="auctex"
 
 NAME="emacs-auctex"
-VERSION=11.87
-RELEASE=2
+VERSION=11.88
+RELEASE=1
 
 HOMEPAGE="http://www.gnu.org/software/auctex/"
 SRC_URI="mirror://gnu/auctex/${ORIG_PN}-${VERSION}.tar.gz"
+# GIT_URI="git://git.savannah.gnu.org/auctex.git"
+# inherit git
 
 MAKEOPTS+=" -j1 "
 
@@ -24,9 +26,14 @@ source chunks (such as single formulas or graphics) directly as images
 in the source buffer."
 
 src_compile() {
+	# cd ${S}
+	# ./autogen.sh
 	lndirs
 	cd ${B}
-	cygconf --localstatedir=/var/lib --with-texmf-dir=/usr/share/texmf-dist
+	SITELISP=/usr/share/emacs/site-lisp
+	cygconf --localstatedir=/var/lib \
+	        --with-auctexstartfile=${SITELISP}/auctex.el \
+		--with-previewstartfile=${SITELISP}/preview-latex.el
 	cygmake
 }
 
@@ -40,4 +47,11 @@ src_install() {
 		;; no-byte-compile: t
 		;; End:
 	_EOF
+	dodir /etc/postinstall
+	cat > ${D}/etc/postinstall/emacs-auctex.sh <<-_EOF
+		/usr/bin/mktexlsr
+	_EOF
+
 }
+
+ARCH=noarch
