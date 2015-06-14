@@ -2,10 +2,12 @@ ORIG_PN="auctex"
 
 NAME="emacs-auctex"
 VERSION=11.88
-RELEASE=1
+RELEASE=2
+
+PKG_NAMES="${PN} preview-latex"
 
 HOMEPAGE="http://www.gnu.org/software/auctex/"
-SRC_URI="mirror://gnu/auctex/${ORIG_PN}-${VERSION}.tar.gz"
+SRC_URI="mirror://gnu/auctex/${ORIG_PN}-${VERSION}.tar.gz postinstall.sh"
 # GIT_URI="git://git.savannah.gnu.org/auctex.git"
 # inherit git
 
@@ -13,17 +15,30 @@ MAKEOPTS+=" -j1 "
 
 CATEGORY="Editors"
 
-REQUIRES="emacs texlive-collection-latex texlive-collection-latexrecommended"
+emacs_auctex_REQUIRES="emacs preview-latex"
 
-SUMMARY="TeX macros for Emacs"
+emacs_auctex_SUMMARY="TeX macros for Emacs"
 
-DESCRIPTION="AUCTeX is an extensible package for writing and formatting TeX
+preview_latex_REQUIRES="texlive-collection-latex texlive-collection-latexrecommended"
+
+preview_latex_SUMMARY="Extract bits of a LaTeX source for output"
+
+emacs_auctex_DESCRIPTION="AUCTeX is an extensible package for writing and formatting TeX
 files in GNU Emacs and XEmacs.  It supports many different TeX macro
 packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and DocTeX (dtx
-files).  AUCTeX includes preview-latex which makes LaTeX a tightly
-integrated component of your editing workflow by visualizing selected
+files).  AUCTeX includes preview-latex, which makes LaTeX a tightly
+integrated component of your editing workflow by including selected
 source chunks (such as single formulas or graphics) directly as images
 in the source buffer."
+
+preview_latex_DESCRIPTION="This is a self-contained subpackage of emacs-auctex that allows
+appropriately selected parts of a LaTeX document to be formatted and
+displayed within the Emacs editor.  It also has uses that do not
+require Emacs."
+
+emacs_auctex_CONTENTS="usr/share/doc usr/share/emacs usr/share/info/auctex* var/lib/auctex"
+
+preview_latex_CONTENTS="usr/share/info/preview-latex* usr/share/texmf-site etc/postinstall"
 
 src_compile() {
 	# cd ${S}
@@ -47,11 +62,8 @@ src_install() {
 		;; no-byte-compile: t
 		;; End:
 	_EOF
-	dodir /etc/postinstall
-	cat > ${D}/etc/postinstall/emacs-auctex.sh <<-_EOF
-		/usr/bin/mktexlsr
-	_EOF
-
+	exeinto /etc/postinstall
+	newexe ${S}/postinstall.sh preview-latex.sh
 }
 
 ARCH=noarch

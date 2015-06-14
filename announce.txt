@@ -1,14 +1,15 @@
-The following package has been updated in the Cygwin distribution:
+The following packages have been updated in the Cygwin distribution:
 
-* emacs-auctex-11.88-1
+* emacs-auctex-11.88-2
+* preview-latex-11.88-2
 
 AUCTeX is an extensible package for writing and formatting TeX files in GNU Emacs and XEmacs.  It supports many different TeX macro packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and DocTeX (dtx files).  AUCTeX includes preview-latex, which makes LaTeX a tightly integrated component of your editing workflow by visualizing selected source chunks (such as single formulas or graphics) directly as images in the source buffer.
 
-This is a new upstream release.  See the release announcement
+This is a repackaging of emacs-auctex-11.88-1 as requested in
 
-  http://lists.gnu.org/archive/html/auctex/2014-10/msg00088.html
+  https://cygwin.com/ml/cygwin-apps/2015-05/msg00066.html .
 
-for a list of changes since version 11.87.
+The only change is that preview-latex has been split off as a separate subpackage that does not require emacs.
 
 Ken Brown
 Cygwin's emacs-auctex maintainer
