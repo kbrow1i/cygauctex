@@ -1,15 +1,33 @@
-The following packages have been updated in the Cygwin distribution:
+From cygwin-announce-emacs-auctex-11.89-1 Sun Nov 15 14:48:59 2015
+From: Ken Brown <kbrown@cornell.edu>
+To: cygwin-announce@cygwin.com
+Date: Sun, 15 Nov 2015 14:48:59 -0500
+Subject: emacs-auctex 11.89-1
 
-* emacs-auctex-11.88-2
-* preview-latex-11.88-2
+The following packages have been uploaded to the Cygwin distribution:
 
-AUCTeX is an extensible package for writing and formatting TeX files in GNU Emacs and XEmacs.  It supports many different TeX macro packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and DocTeX (dtx files).  AUCTeX includes preview-latex, which makes LaTeX a tightly integrated component of your editing workflow by visualizing selected source chunks (such as single formulas or graphics) directly as images in the source buffer.
+* emacs-auctex-11.89-1
+* preview-latex-11.89-1
 
-This is a repackaging of emacs-auctex-11.88-1 as requested in
+AUCTeX is an extensible package for writing and formatting TeX files
+in GNU Emacs and XEmacs.  It supports many different TeX macro
+packages, including AMS-TeX, LaTeX, Texinfo, ConTeXt, and DocTeX (dtx
+files).  AUCTeX includes preview-latex, which makes LaTeX a tightly
+integrated component of your editing workflow by visualizing selected
+source chunks (such as single formulas or graphics) directly as images
+in the source buffer.
 
-  https://cygwin.com/ml/cygwin-apps/2015-05/msg00066.html .
+preview_latex is a self-contained subpackage of emacs-auctex that
+allows appropriately selected parts of a LaTeX document to be
+formatted and displayed within the Emacs editor.  It also has uses
+that do not require Emacs.
 
-The only change is that preview-latex has been split off as a separate subpackage that does not require emacs.
+This is an update to the latest upstream release.  See the
+announcement at
+
+  http://lists.gnu.org/archive/html/info-auctex/2015-11/msg00000.html
+
+for a list of changes since the previous release.
 
 Ken Brown
 Cygwin's emacs-auctex maintainer
