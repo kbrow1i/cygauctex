@@ -40,7 +40,7 @@ emacs_auctex_CONTENTS="usr/share/doc usr/share/emacs usr/share/info/auctex* var/
 
 preview_latex_CONTENTS="usr/share/info/preview-latex* usr/share/texmf-site etc/postinstall"
 
-DEPEND="emacs"
+DEPEND="emacs texlive-collection-latex"
 
 src_compile() {
 	# cd ${S}
