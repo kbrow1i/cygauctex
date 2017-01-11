@@ -1,13 +1,13 @@
-From cygwin-announce-emacs-auctex-11.89-1 Sun Nov 15 14:48:59 2015
+From cygwin-announce-emacs-auctex-11.90-1 Wed Jan 11 11:09:24 2017
 From: Ken Brown <kbrown@cornell.edu>
 To: cygwin-announce@cygwin.com
-Date: Sun, 15 Nov 2015 14:48:59 -0500
-Subject: emacs-auctex 11.89-1
+Date: Wed, 11 Jan 2017 11:09:24 -0500
+Subject: emacs-auctex 11.90-1
 
 The following packages have been uploaded to the Cygwin distribution:
 
-* emacs-auctex-11.89-1
-* preview-latex-11.89-1
+* emacs-auctex-11.90-1
+* preview-latex-11.90-1
 
 AUCTeX is an extensible package for writing and formatting TeX files
 in GNU Emacs and XEmacs.  It supports many different TeX macro
@@ -25,7 +25,7 @@ that do not require Emacs.
 This is an update to the latest upstream release.  See the
 announcement at
 
-  http://lists.gnu.org/archive/html/info-auctex/2015-11/msg00000.html
+  http://lists.gnu.org/archive/html/info-auctex/2017-01/msg00000.html
 
 for a list of changes since the previous release.
 

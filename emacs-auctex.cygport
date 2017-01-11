@@ -1,7 +1,7 @@
 ORIG_PN="auctex"
 
 NAME="emacs-auctex"
-VERSION=11.89
+VERSION=11.90
 RELEASE=1
 
 PKG_NAMES="${PN} preview-latex"
