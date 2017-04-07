@@ -1,19 +1,14 @@
 #!/bin/sh
-set -e
+exit_status=0
 
-echo fetching...
-cygport emacs-auctex.cygport fetch
+cygport emacs-auctex.cygport fetch prep compile || exit_status=1
 
-echo prepping...
-cygport emacs-auctex.cygport prep
-
-echo compiling...
-cygport emacs-auctex.cygport compile
-
-echo installing...
-cygport emacs-auctex.cygport inst
-
-echo packaging...
-cygport emacs-auctex.cygport pkg
+if [ $exit_status -eq 0 ]
+then
+    cygport emacs-auctex.cygport inst pkg || exit_status=1
+    cygport emacs-auctex.cygport test || echo "Test(s) failed."
+fi
 
 tar -cJf artifact.tar.xz emacs-auctex-*/dist emacs-auctex-*/log
+
+exit $exit_status
