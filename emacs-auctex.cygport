@@ -15,7 +15,7 @@ MAKEOPTS+=" -j1 "
 
 CATEGORY="Editors"
 
-emacs_auctex_REQUIRES="emacs preview-latex"
+emacs_auctex_REQUIRES="emacs-common preview-latex"
 
 emacs_auctex_SUMMARY="TeX macros for Emacs"
 
